@@ -1,0 +1,121 @@
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-top: 20px;
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto; 
+    padding: 20px;
+    border: 2px solid #3498db;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+form:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+fieldset {
+    border: none;
+    margin-bottom: 5px;
+}
+
+label, input, select, button {
+    display: block;
+    margin-bottom: 3px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+label.visible, input.visible, select.visible, button.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+input[type="text"], input[type="email"], input[type="password"], select, button {
+    width: calc(100% - 10px);
+    padding: 6px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+}
+
+button {
+    background-color: #3498db;
+    color: #fff;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.subscribe-container {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.subscribe-container input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.submit-container {
+    display: flex;
+    justify-content: center;
+    width: 50px;
+}
+
+.gender-container,
+.subscribe-container {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.gender-container input[type="radio"],
+.subscribe-container input[type="checkbox"] {
+    margin-right: 10px;
+} 
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+form fieldset {
+    animation: fadeIn 0.6s ease forwards;
+}
